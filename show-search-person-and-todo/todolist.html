@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="site-adi">
+            <h2>Bordo.io  To Do List</h2>
+        </div>
+        <div class="navbar-menu">
+            <button class="btn2" onclick="window.location.href='search.html'">Search</button>
+            <a href="index.html">Home</a>
+        </div>
+
+    </nav>
+
+    <style>
+        body  {
+            background-image: url('http://wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <center>
+        <!--type="text"  onfocus="this.value=''"  value="İsim girin..." name="" id="search">-->
+        <input type="text" onfocus="this.value=''" name="" id="to-do-list" minlength="2" size="18" > 
+        <button id="add-btn" class="button-save"  onclick="addlist()" >Add</button>
+           
+        <div class="todolist"></div>
+    
+        <button id="show-btn" class="button-show" onclick=" showlist()">Show List</button>
+        
+    </center>
+  
+    <script src="script.js"></script>
+</body>
+</html>

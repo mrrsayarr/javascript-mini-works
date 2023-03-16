@@ -1,0 +1,46 @@
+#main {
+    max-width: 500;
+    margin: 40px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+div#heroContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+img.hero {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 110px;
+    margin-left: 80px;
+    margin-right: 50px;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    border: 1px solid black;
+    font-size: large;
+    margin-top: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.back-images {
+    background-color: #000000;
+}
+.back-images img {
+    opacity: 0.2;
+}
+
+.gameResult {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+

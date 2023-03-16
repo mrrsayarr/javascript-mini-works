@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --asphalt:      #140f07;
+  --cloud-burst:  #1F2C4B;
+  --waikawa-grey: #5462A5;
+  --jordy-blue:   #9ca1fa;
+  --wisp-pink:    #fdebf5;
+  --white:        #ffffff;
+}
+
+.layout { 
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+/* NAVBAR --------------------------------------- */
+.navbar {
+  height: 10vh;
+  background: var(--waikawa-grey);
+  background-image: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+
+  position: sticky !important;
+  top: 0;
+  z-index: 999 !important;
+}
+
+.navbar .nav-item-a {
+  height: 6vh;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar .nav-item-a .logo {
+    color: var(--white);    
+    font-weight: 700;     
+    font-size: 25px;    
+    cursor: pointer; 
+}
+
+.navbar .nav-item-a .btn {
+   color: white;
+   font-size: x-large;
+   border-radius: 5px !important;
+   border: 1px solid white;
+}
+
+.navbar .nav-item-a a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+}
+.navbar .nav-item-last {
+  width: 50vh;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+}
+
+
+
+.hero-section{
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/11/10/60057/shopping-31.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .hero-section-content-logo{
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+.shopping-cart-list{
+  position: absolute;
+  width: 25rem;
+  right: -0.75rem;
+  top: 2.9rem;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.shopping-cart-list .list-item{
+  margin-top: 1rem;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+
+.sub-heading{
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px var(--asphalt);
+  font-size: 50px;
+}
+.sub-heading:hover{
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px var(--asphalt);
+  font-size: 50px;
+
+  -webkit-animation: sub-heading 5s infinite; 
+  -ms-animation: sub-heading 5s infinite;
+  animation: sub-heading 5s infinite; 
+
+}
+@-webkit-keyframes sub-heading{
+  0%{color:  orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+100%{color:  orange;}
+}
+
+@-ms-keyframes sub-heading{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+100%{color:  orange;}
+}
+
+@keyframes sub-heading{
+  0%{color:  orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+100%{color:  orange;}
+}
+
+/* SAYFA --------------------------------------- */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--white);
+  height: 90vh auto;
+  margin-bottom: 150px;
+
+}
+/* SİDEBAR MENU ------------------------------------*/
+.container-category-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+.container-category-btn::before {
+  margin-right: 20px;
+}
+/* SIDEBAR ICON EXCHNAGE ------------------- */
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-image: linear-gradient(315deg, var(--cloud-burst) 0%, var(--jordy-blue) 74%);
+  margin: 6px 0;
+  transition: 0.4s;
+  cursor: pointer;
+
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/*SIDE BAR -----------------------------------*/
+.content .sidebar {
+  height: 100% auto;
+  top: 10vh;
+  background: var(--waikawa-grey);
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  height:100% ;
+  width: 250px; 
+  position: fixed; 
+  top: 10vh; 
+  left: 0;
+  background-image: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.content .sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.content .sidebar .heading {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--white);
+}
+
+.content .sidebar .heading h4 {
+  color: white;
+}
+
+
+/*SIDE BAR CATEGORIES --------------------------*/
+.content .sidebar .categories { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;               
+}
+
+.content .sidebar .categories .category {
+   border-bottom: 1px solid var(--white);
+   border-radius: 20px;
+   width: 80%;
+   margin: 20px;
+   color: var(--white);
+   font-size: 13px !important;
+   text-align: center;
+}
+
+.content .products {
+ display: flex;
+ width: 70%;
+ flex-wrap: wrap;
+ margin-top: 50px;
+ justify-content: space-between;
+ flex-direction: row;
+ align-items: center;
+ margin-left: 33vh;
+}
+/*CARDS -----------------------------*/
+.content .products .card {
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 15px;
+  background-image: linear-gradient(315deg, var(--white) 0%, var(--white) 74%);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  margin-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width:fit-content;
+
+}
+.content .products .card:hover {
+  cursor: pointer;
+}
+
+/*-CARD VE CARD HOVER TEXT-------------------------------------*/
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: small !important;
+}
+.card-title:hover {
+  cursor: pointer;
+}
+.card-price {
+  font-size: large;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;            
+}
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  align-self: center;
+  object-fit: scale-down; /* RESMİ BOZMADAN SIĞDIRMA */
+}
+
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+  overflow: hidden;
+  width: 101%;
+  height: 101%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container-img-top:hover .overlay-text {
+  background-image: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  border-radius: 15px;
+}
+
+.container-img-top .text {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*---------------------------------------*/
+.card-button {
+  text-decoration: none;
+  background-image: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+  padding: 5px;
+  border-radius: 15px;
+  
+}
+.card-button:hover {
+  text-decoration:none;
+}
+.btn-info {
+  border: 1px solid var(--asphalt);
+}
+/* IMAGES BACKROUND FOR DESCRIPTION -------------------*/
+
+
+
+
+
+/* FOOTER ---------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,900);
+
+.footer {
+  width: 100%;
+  height: 150px;
+  font-size: x-large;
+  background-image: linear-gradient(315deg, var(--jordy-blue) 0%, var(--cloud-burst) 74%);
+  position: fixed; left: 0; bottom: 0;
+  z-index: -100;
+  text-align: center;
+  color: var(--white,);
+  padding: 20px;
+
+}

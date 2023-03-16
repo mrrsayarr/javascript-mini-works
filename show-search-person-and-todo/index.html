@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <style>
+        body  {
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        } 
+    </style>
+
+    <nav id="navbar">
+        <div class="site-adi">
+            <h2>Bordo.io</h2>
+        </div>
+        <div class="navbar-menu">
+            <!--TEXTBOX'A TIKLADIĞINDA BOŞALIR
+            <input class="search" type="text"  onfocus="this.value=''"  value="İsim girin..." name="" id="search">
+            -->
+            <button class="btn2" onclick="window.location.href='search.html'">Search</button>
+            <button class="btn4" onclick="window.location.href='todolist.html'">Do List</button>
+            <a href="index.html">Home</a>
+        </div>
+
+    </nav>
+
+    <div class="layout">
+        <button class="btn1" onclick="getUsers()">Show registered persons</button>
+        <div class="main-show-user">
+            <div class="show-user"></div>
+        </div>
+
+        <div class="search-user"></div>
+
+        
+        <button class="btn3" onclick="showPhoto()">Show person photo</button>
+
+        <div class="photo-container"></div>
+        
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

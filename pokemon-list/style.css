@@ -1,0 +1,77 @@
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #f40808 ,#ecf400);
+}
+
+
+
+/* MAIN CONTAINER */
+.main {
+    margin: 30vh;
+}
+.form-inline {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.pokemon-input {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    border-radius: 20px;
+
+}
+
+
+/* CARDS*/
+.card {
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    width: 40%;
+    overflow: hidden;
+}
+
+
+
+
+/* */
+
+
+
+
+
+
+
+/* */
+
+
+
+
+
+
+
+
+/* */
+
+
+
+
+
+
+
+
+
+/* */

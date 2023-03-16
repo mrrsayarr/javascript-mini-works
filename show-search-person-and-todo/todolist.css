@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    height: 9vh;
+    width: 100%;
+    background-color: #760909;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#navbar .site-adi{
+    color: #cfd9e6;
+    margin-left: 40px;
+}
+
+#navbar .navbar-menu {
+    display : flex;
+    width: 400px;
+    height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar .navbar-menu a {
+    color: #cfd9e6;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.2s;
+    margin-right: 30px;
+}
+
+#navbar .navbar-menu a {
+    color: #cfd9e6;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.2s;
+    margin-right: 30px;
+}
+
+.todolist {
+    font-family: sans-serif;
+    font: bolder;
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: flex-start;
+    background-color: rgba(203, 210, 227, 0.468);
+    margin: 13px;
+    padding: 15px;
+}
+
+.btn2 {
+    color:white;
+    border: 1px solid #ffffff;
+    background-color: #760909;
+    border-radius: 20px;
+    margin: 20px;
+    margin-right: 30px;
+    padding: 5px;
+    font: larger;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: rgb(11, 147, 68);
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.button2:hover {
+    background-color: #760909;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+.button-save {
+    background-color: #760909;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 7px;
+}
+
+.button-save:hover {
+    background-color: #760909;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+.button-show {
+    background-color: #760909;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin:20px ;
+    padding: 7px;
+    
+}
+
+.button-show:hover {
+    background-color: #760909;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    transform: scale(1.10); 
+}
+#to-do-list {
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 20px;
+}

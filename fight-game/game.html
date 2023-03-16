@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="back-images">
+    <style>
+        body {
+          background-image: url('https://www.highsnobiety.com/static-assets/thumbor/5LpCEwKIxrKPFTMCMJ5IDqXd1DA=/30x20/www.highsnobiety.com/static-assets/wp-content/uploads/2016/03/22153356/bape-a-bathing-ape-batman-superman-03.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id='main'>
+    <button class="button" onclick="playGame()">Fight</button>
+    <div id='heroContainer'>
+        <div id='heroBatman'>
+            <img src="https://i0.wp.com/shiftdelete.net/wp-content/uploads/2021/12/the-batman-filminden-yeni-fragman-paylasildi.jpg?fit=1280%2C720&ssl=1" class='hero'>
+            <br>Life: <span id='batmanLife'></span>
+        </div>
+
+        <div id='heroSuperman'>
+            <img src="https://i0.wp.com/shiftdelete.net/wp-content/uploads/2021/02/superman-2.jpg?fit=1280%2C720&ssl=1" class='hero'>
+            <br>Life: <span id='supermanLife'></span>
+        </div>
+    </div>
+
+    <div class="gameResult" id='gameResult'></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

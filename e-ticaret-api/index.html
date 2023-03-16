@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Best Shop</title>
+</head>
+<body>
+          
+                    
+  <div class="layout">
+    <!--NAVBAR-->
+    <nav class="navbar">
+      <div class="nav-item-a">
+        <div class="nav-item-a">
+          <!-- 
+              <button onclick="toggleSideBar()" class="category-btn" href="#">Kategoriler</a> 
+          -->
+            <div id="container-category-btn" class="container-category-btn" onclick="toggleSideBar()">
+              <!-- exchange kapalı açmak için:  onclick="toggleSideBar(),myFunction(this)"  yaz-->
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+        </div>
+        <div class="logo" >Best Shopping</div>
+      </div>
+        
+        <div class="nav-item-last">
+
+              <!-- SHOPPING CART -->
+              <div class="shopping-cart position-relative">
+                <button type="button" class="btn-cart btn btn-primary position-relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
+                </button>
+              </div>
+
+              <div class="shopping-cart-list bg-primary d-none">
+                  <b class="fs-5 text-white my-3">Shopping Cart</b>
+              </div>
+            
+
+              <div class="nav-item-b">
+                <button class="btn  btn-primary position-relative ">Giriş Yap</button>
+              </div>
+              <div class="nav-item-b">
+                <button class="btn  btn-primary position-relative">Kayıt Ol</button>
+              </div>
+
+        </div>
+      </nav>
+    
+    <header class="hero-section">
+      <div class="hero-section-content">
+          <img src="images/light-logo.png" class="hero-section-content-logo" alt="">
+          <p class="sub-heading">Best fashion collection of all time</p>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- SIDEBAR -->
+      <div id="sidebar" class="sidebar">
+        <!-- CATEGORY -->
+        <div class="heading"><h4>Kategoriler</h4></div>
+        <div class="categories"> </div>
+      </div>
+      <!-- PRODUCT -->          
+      <div class="products"></div>
+    </div>
+
+   
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Best fashion collection of all time 
+    <strong>"Best Shopping"</strong>
+    <p>
+       ...
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+<!---->
