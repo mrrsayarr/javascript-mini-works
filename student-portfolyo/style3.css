@@ -1,0 +1,90 @@
+#navbar {
+    height: 9vh;
+    width: 100%;
+    background-color: #405c7e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar .site-adi{
+    color: #cfd9e6;
+    margin-left: 40px;
+}
+
+#navbar .navbar-menu {
+    display : flex;
+    width: 400px;
+    height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar .navbar-menu a {
+    color: #cfd9e6;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.2s;
+}
+
+.skillss {
+    font-family: sans-serif;
+    font: bolder;
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(152, 165, 199, 0.468);
+    margin: 13px;
+    padding: 15px;
+}
+
+.button2 {
+    background-color: rgb(11, 147, 68);
+    color: #fff;
+    transition: 0.2s;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.button2:hover {
+    background-color: rgb(75, 140, 220);
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+.button-save {
+    background-color: #5e93d5;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 7px;
+}
+
+.button-save:hover {
+    background-color: #5e93d5;
+    margin: 20px;
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+.button-show {
+    background-color: #5e93d5;
+    border-radius: 10px;
+    margin:20px ;
+    padding: 7px;
+    
+}
+
+.button-show:hover {
+    background-color: #5e93d5;
+    transition: 0.2s;
+    transform: scale(1.10); 
+}
+
+
+
+
+

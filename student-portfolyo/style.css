@@ -1,0 +1,76 @@
+
+#navbar {
+    height: 9vh;
+    width: 100%;
+    background-color: #405c7e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar .site-adi{
+    color: #cfd9e6;
+    margin-left: 40px;
+}
+
+#navbar .navbar-menu {
+    display : flex;
+    width: 400px;
+    height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar .navbar-menu a {
+    color: #cfd9e6;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.2s;
+}
+
+button {
+    background-color: rgb(11, 147, 68);
+    color: #fff;
+    box-shadow: 4px 4px 4px #b3b7bc;
+    transition: 0.2s;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: rgb(17, 202, 103);
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+.picture {
+    border-radius: 5%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 330px;
+    margin: 50px;
+}
+
+.picture img {
+    display: block;
+}
+
+.button2  {
+    background-color: rgb(0, 125, 242);
+    color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 4px #b3b7bc;
+    transition: 0.2s;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.button2:hover {
+    background-color: rgb(26, 30, 223);
+    transition: 0.2s;
+    transform: scale(1.10);
+}
+
+
