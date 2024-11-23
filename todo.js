@@ -7,67 +7,69 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #343a40; /* Dark Mode Default */
+            color: #ffffff;
             transition: background-color 0.3s, color 0.3s;
         }
-        .dark-mode {
-            background-color: #343a40;
-            color: #ffffff;
+        .light-mode {
+            background-color: #f8f9fa; /* Light Mode */
+            color: #343a40;
         }
         .container {
             margin-top: 50px;
+            padding: 20px; /* Adjust spacing on left and right */
         }
         .completed {
             text-decoration: line-through;
-            color: #6c757d;
-        }
-        .dark-mode .completed {
             color: #868e96;
         }
-        .dark-mode .list-group-item {
+        .light-mode .completed {
+            color: #6c757d;
+        }
+        .light-mode .list-group-item {
             background-color: #495057;
             color: #ffffff;
         }
-        .dark-mode .list-group-item:hover {
+        .light-mode .list-group-item:hover {
             background-color: #6c757d;
         }
         .priority-high {
             font-weight: bold;
-            color: #dc3545; /* Kırmızı */
+            color: #dc3545; /* Red */
         }
         .priority-normal {
-            color: #007bff; /* Mavi */
+            color: #007bff; /* Blue */
         }
         .priority-critical {
-            color: #ffc107; /* Sarı */
+            color: #ffc107; /* Yellow */
         }
         .critical-icon {
-            color: #dc3545; /* Kırmızı */
+            color: #dc3545; /* Red */
             margin-right: 5px;
         }
     </style>
 </head>
-<body>
-    <div class="container">
+<body class="dark-mode">
+    <div class="m-4">
         <h2 class="text-center">To Do List</h2>
         <div class="text-center mb-3">
-            <button class="btn btn-secondary" id="toggleThemeBtn">Karanlık Modu Aç</button>
+            <button class="btn btn-secondary" id="toggleThemeBtn">Turn On Light Mode</button>
         </div>
         <div class="input-group mb-3">
-            <input type="text" id="taskInput" class="form-control" placeholder="Yeni görev ekle..." aria-label="Yeni görev">
+            <input type="text" id="taskInput" class="form-control" placeholder="Add new task..." aria-label="New task">
             <select id="prioritySelect" class="form-control">
                 <option value="normal">Normal</option>
-                <option value="high">Yüksek</option>
-                <option value="critical">Kritik</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
             </select>
             <div class="input-group-append">
-                <button class="btn btn-primary" id="addTaskBtn">Ekle</button>
+                <button class="btn btn-primary" id="addTaskBtn">Add</button>
             </div>
         </div>
         <div class="mb-3">
-            <button class="btn btn-info" id="showAllBtn">Tüm Görevler</button>
-            <button class="btn btn-success" id="showCompletedBtn">Tamamlananlar</button>
-            <button class="btn btn-warning" id="showPendingBtn">Tamamlanmayanlar</button>
+            <button class="btn btn-info" id="showAllBtn">All Tasks</button>
+            <button class="btn btn-success" id="showCompletedBtn">Completed</button>
+            <button class="btn btn-warning" id="showPendingBtn">Pending</button>
         </div>
         <ul class="list-group" id="taskList"></ul>
     </div>
@@ -82,8 +84,8 @@
         const showCompletedBtn = document.getElementById('showCompletedBtn');
         const showPendingBtn = document.getElementById('showPendingBtn');
 
-        let tasks = [];
-        let isDarkMode = false;
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || []; /* Load from Local Storage */
+        let isDarkMode = true; /* Dark Mode Default */
 
         function renderTasks(filter = 'all') {
             taskList.innerHTML = '';
@@ -102,9 +104,9 @@
                 li.innerHTML = `
                     <span class="${priorityClass}">${criticalIcon}${task.text} (${task.priority})</span>
                     <div>
-                        <button class="btn btn-success btn-sm mr-2" onclick="toggleComplete(${index})">${task.completed ? 'Geri Al' : 'Tamamla'}</button>
-                        <button class="btn btn-warning btn-sm mr-2" onclick="editTask(${index})">Düzenle</button>
-                        <button class="btn btn-danger btn-sm" onclick="deleteTask(${index})">Sil</button>
+                        <button class="btn btn-success btn-sm mr-2" onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
+                        <button class="btn btn-warning btn-sm mr-2" onclick="editTask(${index})">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteTask(${index})">Delete</button>
                     </div>
                 `;
                 taskList.appendChild(li);
@@ -118,31 +120,36 @@
                 tasks.push({ text: taskText, priority: taskPriority, completed: false });
                 taskInput.value = '';
                 renderTasks();
+                localStorage.setItem('tasks', JSON.stringify(tasks)); /* Save to Local Storage */
             }
         }
 
         function toggleComplete(index) {
             tasks[index].completed = !tasks[index].completed;
             renderTasks();
+            localStorage.setItem('tasks', JSON.stringify(tasks)); /* Save to Local Storage */
         }
 
         function editTask(index) {
-            const newTaskText = prompt('Görevi düzenleyin:', tasks[index].text);
+            const newTaskText = prompt('Edit the task:', tasks[index].text);
             if (newTaskText !== null && newTaskText.trim() !== '') {
                 tasks[index].text = newTaskText.trim();
                 renderTasks();
+                localStorage.setItem('tasks', JSON.stringify(tasks)); /* Save to Local Storage */
             }
         }
 
         function deleteTask(index) {
             tasks.splice(index, 1);
             renderTasks();
+            localStorage.setItem('tasks', JSON.stringify(tasks)); /* Save to Local Storage */
         }
 
         function toggleTheme() {
             isDarkMode = !isDarkMode;
             document.body.classList.toggle('dark-mode', isDarkMode);
-            toggleThemeBtn.textContent = isDarkMode ? 'Aydınlık Modu Aç' : 'Karanlık Modu Aç';
+            document.body.classList.toggle('light-mode', !isDarkMode); /* For Light Mode */
+            toggleThemeBtn.textContent = isDarkMode ? 'Turn On Light Mode' : 'Turn On Dark Mode';
         }
 
         addTaskBtn.addEventListener('click', addTask);
@@ -155,6 +162,8 @@
         showAllBtn.addEventListener('click', () => renderTasks('all'));
         showCompletedBtn.addEventListener('click', () => renderTasks('completed'));
         showPendingBtn.addEventListener('click', () => renderTasks('pending'));
+
+        renderTasks(); /* Show Tasks on Page Load */
     </script>
 </body>
 </html>
